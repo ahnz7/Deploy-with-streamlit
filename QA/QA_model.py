@@ -15,7 +15,7 @@ import os
 
 class QA():
     def __init__(self):
-        self.pipeline = pipeline('question-answering',model = 'ktrapeznikov/biobert_v1.1_pubmed_squad_v2')
+        self.pipeline = pipeline('question-answering',model = 'ktrapeznikov/albert-xlarge-v2-squad-v2')
     
     def predict(self,questions,context,n):
         answers = self.pipeline(context = context,question = questions,topk = n,max_answer_len = 50,doc_stride = 256)
